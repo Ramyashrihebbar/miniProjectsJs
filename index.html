@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        #loading, #results{
+            display: none;
+        }
+    </style>
     <title>Loan Calculator</title>
 </head>
 <body class="bg-dark">
@@ -12,6 +17,7 @@
             <div class="col-md-6 mx-auto ">
                 <div class="card card-body text-center mt-25">
                     <h1 class="heading display-5 pb-3">LOAN CALCULATOR</h1>
+                    <!--form starts here-->
                     <form id="loan-form">
                         <div class="form-group">
                             <div class="input-group">
@@ -48,10 +54,15 @@
                                 />
                         </div>
                         <div class="form-group">
-                            <input type="button" class="btn btn-dark btn-block" value="calculate"/>
+                            <input 
+                            type="submit" 
+                            class="btn btn-dark btn-block" 
+                            value="calculate"/>
                         </div>
-                        
                     </form>
+                    <div id="loading">
+                        <img src="loading.gif" alt=""/>
+                    </div>
                     <div id="results" class="pt-4">
                         <h5>Results</h5>
                         <div class="form-group">
@@ -99,6 +110,6 @@
             </div>
         </div>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
